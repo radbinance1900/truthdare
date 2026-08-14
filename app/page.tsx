@@ -133,7 +133,7 @@ function HomeContent() {
             <p>{panel === "create" ? `You chose ${gameModes.find((mode) => mode.gameMode === selectedGame)?.title ?? "a game"}. Choose a nickname to continue.` : "Ask your partner for their room code, then jump in."}</p>
             <form onSubmit={panel === "create" ? handleCreate : handleJoin}>
               <label htmlFor="name">Your nickname</label>
-              <input id="name" value={name} maxLength={24} onChange={(event) => setName(event.target.value)} placeholder="e.g. Sam" autoComplete="nickname" />
+              <input id="name" value={name} maxLength={24} onChange={(event) => setName(event.target.value)} placeholder="e.g. Vanilla" autoComplete="nickname" />
               {panel === "join" && <>
                 <label htmlFor="code">Room code</label>
                 <input id="code" value={code} maxLength={12} onChange={(event) => setCode(event.target.value.toUpperCase())} placeholder="MINT-42" autoCapitalize="characters" />
